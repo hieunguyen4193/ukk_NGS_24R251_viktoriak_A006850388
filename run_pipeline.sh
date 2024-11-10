@@ -14,8 +14,18 @@ work="./work";
 # gtf="/home/hieunguyen/CRC1382/storage/reference_genomes/Homo_sapiens.GRCh38.108.gtf.gz";
 
 nextflow="/media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/nextflow";
+path_to_ref="/media/hieunguyen/HNSD01/storage/ref";
+
+gtf=${path_to_ref}/Mus_musculus.GRCm39.113.gtf;
+fasta=${path_to_ref}/Mus_musculus.GRCm39.dna.primary_assembly.fa;
 
 max_mem="75GB";
 max_cpus=20;
 
-${nextflow} run ${main_nf} --input $SampleSheet --outdir ${outdir} --genome GRCh37 -profile docker -resume --max_cpus $max_cpus  --max_memory $max_mem --publish_dir_mode copy
+
+${nextflow} run ${main_nf} \
+--input $SampleSheet \
+--outdir ${outdir} \
+--fasta $fasta --gtf $gtf \
+-profile docker \
+-resume --max_cpus $max_cpus  --max_memory $max_mem --publish_dir_mode copy
