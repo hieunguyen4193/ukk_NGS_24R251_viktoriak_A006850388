@@ -1,0 +1,234 @@
+---
+title: "DESeq2, Pair: `r params$condition1`,`r params$condition2`, condition: `r params$condition.col` "
+author:
+  - "Trong-Hieu Nguyen, trnguyen@ukaachen.de"
+date: "Last update on `r format(Sys.time(), '%d %B, %Y')`"
+output:
+  html_document:
+    df_print: paged
+    toc: true
+    toc_float:
+      toc_collapsed: false
+    toc_depth: 3
+    number_sections: false
+    theme: lumen
+params:
+  condition1: NA
+  condition2: NA
+  condition.col: NA
+---
+
+Input data: `r params$salmon.output`
+
+Condition 1: `r params$condition1`
+
+Condition 2: `r params$condition2`
+
+- **Positive** `logFC` indicates that the gene is up in condition 2, `r params$condition2`.
+
+- **Negative** `logFC` indicates that the gene is up in condition 1, `r params$condition1`.
+
+
+```{r preparation, results = 'asis', echo=FALSE, message=FALSE, include=FALSE}
+################################################################################
+# Use this cell to control which pair of samples we want to compare / perform
+# differential expression analysis. Simply filter the input metatada, keep only
+# those you want to compare.
+# condition1 <- "KO_pIgA"
+# condition2 <- "Wildtype_PBS"
+
+condition1 <- params$condition1
+condition2 <- params$condition2
+condition.col <- params$condition.col
+
+# condition1 <- "group1"
+# condition2 <- "group2"
+# condition.col <- "comparison1"
+
+path.to.main.src.dir <- "/media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388"
+
+source(file.path(path.to.main.src.dir, "preparation.R"))
+source(file.path(path.to.main.src.dir, "helper_functions.R"))
+
+path.to.metadata <- file.path(path.to.main.src.dir, "metadata.csv")
+meta.data <- read.csv(path.to.metadata)
+meta.data <- meta.data[, c("Sample.ID", "Name", "Genotype", "Treatment", condition.col)]
+colnames(meta.data) <- c("sample", "Name", "Genotype", "Treatment", "condition")
+
+data.samplesheet <- read.csv(file.path(path.to.main.src.dir, "SampleSheet.csv"))
+outdir <- "/media/hieunguyen/HNSD01/outdir"
+
+path.to.main.output <- file.path(outdir, "NGS_24R251_viktoriak_A006850388", "DESEQ2_output", condition.col)
+dir.create(path.to.main.output, showWarnings = FALSE, recursive = TRUE)
+
+path.to.save.data <- file.path(path.to.main.output, sprintf("case_%s_vs_%s", condition1, condition2), "RData")
+dir.create(path.to.save.data, showWarnings = FALSE, recursive = TRUE)
+  
+filtered.metadata <- subset(meta.data, meta.data$condition %in% c(condition1, condition2))
+filtered.metadata$condition <- factor(filtered.metadata$condition, levels = c(condition1, condition2))
+
+salmon.output <- "/media/hieunguyen/HNSD01/outdir/NGS_24R251_viktoriak_A006850388/star_salmon"
+```
+
+# Metadata
+```{r results = 'asis', echo=FALSE, message=FALSE, include=TRUE}
+filtered.metadata %>% create_dt()
+```
+
+
+```{r generate_deseq_data, results = 'asis', echo=FALSE, message=FALSE, include=FALSE}
+path.to.tx2gene <- file.path(salmon.output, "tx2gene.tsv")
+
+deseq.dataset <- generate_DESeq2_dataset(path.to.salmon.quants = salmon.output,
+                                         path.to.tx2gene = path.to.tx2gene,
+                                         metadata = filtered.metadata)
+
+tx2gene <- read_tsv(path.to.tx2gene, 
+                        col_names = c("transcript_id", "gene_id", "gene_name"), 
+                        show_col_types = FALSE)
+
+
+deseq.output <- run_DESeq2_and_preprocess(deseq.dataset, tx2gene, thresh.pval = 0.05)
+
+saveRDS(deseq.output$deseq.object, file.path(path.to.save.data, "DESeq2_object_results.rds"))
+
+basic.output <- basic.analysis(deseq.output, 
+                               filtered.metadata,
+                               condition1,
+                               condition2,
+                               cutoff.logFC = 0, cutoff.adjp = 0.05)
+
+```
+
+
+# PCA scatter plot, Volcano plot and MA plot {.tabset}
+## PCA
+```{r plotPCA, results = 'asis', echo=FALSE, message=FALSE}
+basic.output$pca.plot
+```
+
+## Volcano plot 
+```{r plotVolcano, results = 'asis', echo=FALSE, message=FALSE}
+basic.output$volcano.plot
+```
+
+## MA plot
+```{r plotMA, results = 'asis', echo=FALSE, message=FALSE}
+basic.output$ma.plot
+```
+
+# Differentially expressed genes 
+
+```{r generate_DE_results, results='asis', echo=FALSE, message=FALSE, warning=FALSE}
+library(hash)
+
+all.basic.outputs <- hash()
+
+for (cutoff in c(0, 1, 2)){
+  basic.output <- basic.analysis(deseq.output, 
+                                 filtered.metadata,
+                                 condition1,
+                                 condition2,
+                                 cutoff.logFC = cutoff, 
+                                 cutoff.adjp = 0.05)
+  
+ all.basic.outputs[[paste0("Cutoff_", cutoff)]] <- basic.output
+}
+
+```
+
+
+## Significant DE genes with higher-than-cutoff logFC
+
+### Heatmaps {.tabset}
+#### LogFC Cut-off 0 {.unlisted .unnumbered}
+```{r plotHeatmap0, results = 'asis', echo=FALSE, message=FALSE, warning=FALSE}
+  all.basic.outputs$Cutoff_0$sig.gene.heatmap
+  
+```
+
+#### LogFC Cut-off 1 {.unlisted .unnumbered}
+```{r plotHeatmap1, results = 'asis', echo=FALSE, message=FALSE, warning=FALSE}
+  all.basic.outputs$Cutoff_1$sig.gene.heatmap
+  
+```
+#### LogFC Cut-off 2 {.unlisted .unnumbered}
+```{r plotHeatmap2, results = 'asis', echo=FALSE, message=FALSE, warning=FALSE}
+  all.basic.outputs$Cutoff_2$sig.gene.heatmap
+  
+```
+
+### Tables {.tabset}
+#### LogFC Cut-off 0 {.unlisted .unnumbered}
+```{r table0, results = 'asis', echo=FALSE, message=FALSE, warning=FALSE}
+  all.basic.outputs$Cutoff_0$sig.genes.with.highlogFC %>% mutate_if(is.numeric, round, digits = 4) %>% create_dt()
+```
+
+#### LogFC Cut-off 1 {.unlisted .unnumbered}
+```{r table1, results = 'asis', echo=FALSE, message=FALSE, warning=FALSE}
+  all.basic.outputs$Cutoff_1$sig.genes.with.highlogFC %>% mutate_if(is.numeric, round, digits = 4) %>% create_dt()
+```
+
+#### LogFC Cut-off 2 {.unlisted .unnumbered}
+```{r table2, results = 'asis', echo=FALSE, message=FALSE, warning=FALSE}
+  all.basic.outputs$Cutoff_2$sig.genes.with.highlogFC %>% mutate_if(is.numeric, round, digits = 4) %>% create_dt()
+```
+
+
+## Non-significant DE genes with higher-than-cutoff logFC
+### Heatmaps {.tabset}
+
+#### LogFC Cut-off 1 {.unlisted .unnumbered}
+```{r nonsigHeatmap1, results = 'asis', echo=FALSE, message=FALSE, warning=FALSE}
+
+  all.basic.outputs$Cutoff_1$nonsig.gene.heatmap
+  
+```
+#### LogFC Cut-off 2 {.unlisted .unnumbered}
+```{r nonsigHeatmap2, results = 'asis', echo=FALSE, message=FALSE, warning=FALSE}
+
+  all.basic.outputs$Cutoff_2$nonsig.gene.heatmap
+  
+```
+
+### Tables {.tabset}
+
+#### LogFC Cut-off 1 {.unlisted .unnumbered}
+```{r nonsigTable1, results = 'asis', echo=FALSE, message=FALSE, warning=FALSE}
+  all.basic.outputs$Cutoff_1$nonsig.genes.with.highlogFC %>% mutate_if(is.numeric, round, digits = 4) %>% create_dt()
+```
+
+#### LogFC Cut-off 2 {.unlisted .unnumbered}
+```{r nonsigTable2, results = 'asis', echo=FALSE, message=FALSE, warning=FALSE}
+  all.basic.outputs$Cutoff_2$nonsig.genes.with.highlogFC %>% mutate_if(is.numeric, round, digits = 4) %>% create_dt()
+```
+
+
+```{r savedata, echo=FALSE, message=FALSE, include=FALSE}
+#########################################################################
+# Save data
+#########################################################################
+
+for (val in names(all.basic.outputs)){
+  dir.create(file.path(path.to.save.data, sprintf("%s_vs_%s", condition1, condition2)), 
+             showWarnings = FALSE)
+  
+  sig.genes.at.logFC <- all.basic.outputs[[val]]$sig.genes.with.highlogFC$gene_id
+  
+  saveRDS(object = sig.genes.at.logFC, 
+          file = file.path(path.to.save.data, sprintf("sig_genes_%s_vs_%s_logFC_%s.rds", condition1, condition2, val)))
+  
+  nonsig.genes.at.logFC <- all.basic.outputs[[val]]$nonsig.genes.with.highlogFC$gene_id
+  
+  saveRDS(object = nonsig.genes.at.logFC, 
+          file = file.path(path.to.save.data, sprintf("nonsig_genes_%s_vs_%s_logFC_%s.rds", condition1, condition2, val)))
+
+}
+saveRDS(object = all.basic.outputs, 
+        file = file.path(path.to.save.data, sprintf("All_basic_analysis_%s_vs_%s.rds", condition1, condition2)))
+
+saveRDS(object = deseq.output$all.resultdf,
+        file = file.path(path.to.save.data, sprintf("DESEQ_res_%s_vs_%s.rds", condition1, condition2)))
+```
+
+

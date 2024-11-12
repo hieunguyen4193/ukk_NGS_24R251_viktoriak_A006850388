@@ -1,0 +1,37 @@
+Sample ID,Name,Genotype,Treatment ,comparison1,comparison2_WT,comparison2_CSK_KO,comparison2_LYN_KO
+Sample_232636,wt Mono,WT,Control,group1,group1,,
+Sample_232639,wt Pat 430,WT,CLL,,group2,,
+Sample_232641,wt Pat 513,WT,CLL,,group2,,
+Sample_232643,wt Pat 538,WT,CLL,,group2,,
+Sample_232645,Cas9 Mono,WT,Control,group1,group1,,
+Sample_232647,Cas9 Pat 538,WT,CLL,,group2,,
+Sample_232649,Cas9 Pat 513,WT,CLL,,group2,,
+Sample_232651,Cas9 Pat 430,WT,CLL,,group2,,
+Sample_232653,scr Mono,WT,Control,group1,group1,,
+Sample_232655,scr Pat 430,WT,CLL,,group2,,
+Sample_232657,scr Pat xyz,WT,CLL,,group2,,
+Sample_232659,scr Pat 538,WT,CLL,,group2,,
+Sample_232661,CSK1 Mono,CSK KO,Control,group2,,group1,
+Sample_232663,CSK1 Pat 430,CSK KO,CLL,,,group2,
+Sample_232665,CSK1 Pat 513,CSK KO,CLL,,,group2,
+Sample_232667,CSK1 Pat xyz,CSK KO,CLL,,,group2,
+Sample_232669,CSK6 Mono,CSK KO,Control,group2,,group1,
+Sample_232671,CSK6 Pat 538,CSK KO,CLL,,,group2,
+Sample_232673,CSK6 Pat 430,CSK KO,CLL,,,group2,
+Sample_232675,CSK6 Pat 513,CSK KO,CLL,,,group2,
+Sample_232677,CSK7 Mono,CSK KO,Control,group2,,group1,
+Sample_232679,CSK7 Pat xyz,CSK KO,CLL,,,group2,
+Sample_232681,CSK7 Pat 538,CSK KO,CLL,,,group2,
+Sample_232683,CSK7 Pat 430,CSK KO,CLL,,,group2,
+Sample_232685,LYN6f Mono,LYN KO,Control,group3,,,group1
+Sample_232687,LYN6f Pat 513,LYN KO,CLL,,,,group2
+Sample_232689,LYN6f Pat 430,LYN KO,CLL,,,,group2
+Sample_232691,LYN6f Pat xyz,LYN KO,CLL,,,,group2
+Sample_232693,LYNp7 Mono,LYN KO,Control,group3,,,group1
+Sample_232695,LYNp7 Pat 538,LYN KO,CLL,,,,group2
+Sample_232697,LYNp7 Pat xyz,LYN KO,CLL,,,,group2
+Sample_232699,LYNp7 Pat 430,LYN KO,CLL,,,,group2
+Sample_232701,LYNp10 Mono,LYN KO,Control,group3,,,group1
+Sample_232703,LYNp10 Pat 430,LYN KO,CLL,,,,group2
+Sample_232705,LYNp10 Pat 513,LYN KO,CLL,,,,group2
+Sample_232707,LYNp10 Pat 538,LYN KO,CLL,,,,group2
