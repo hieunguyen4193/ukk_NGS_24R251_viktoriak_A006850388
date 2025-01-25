@@ -1,0 +1,14 @@
+sample,fastq_1,fastq_2,strandedness
+Sample_195336,/media/hieunguyen/GSHD_HN01/Download/Viki/CSK/A006850280_195336_S9_L000_R1_001.fastq.gz,/media/hieunguyen/GSHD_HN01/Download/Viki/CSK/A006850280_195336_S9_L000_R2_001.fastq.gz,auto
+Sample_195339,/media/hieunguyen/GSHD_HN01/Download/Viki/CSK/A006850280_195339_S10_L000_R1_001.fastq.gz,/media/hieunguyen/GSHD_HN01/Download/Viki/CSK/A006850280_195339_S10_L000_R2_001.fastq.gz,auto
+Sample_195341,/media/hieunguyen/GSHD_HN01/Download/Viki/CSK/A006850280_195341_S11_L000_R1_001.fastq.gz,/media/hieunguyen/GSHD_HN01/Download/Viki/CSK/A006850280_195341_S11_L000_R2_001.fastq.gz,auto
+Sample_195343,/media/hieunguyen/GSHD_HN01/Download/Viki/CSK/A006850280_195343_S12_L000_R1_001.fastq.gz,/media/hieunguyen/GSHD_HN01/Download/Viki/CSK/A006850280_195343_S12_L000_R2_001.fastq.gz,auto
+Sample_195345,/media/hieunguyen/GSHD_HN01/Download/Viki/CSK/A006850280_195345_S13_L000_R1_001.fastq.gz,/media/hieunguyen/GSHD_HN01/Download/Viki/CSK/A006850280_195345_S13_L000_R2_001.fastq.gz,auto
+Sample_195347,/media/hieunguyen/GSHD_HN01/Download/Viki/CSK/A006850280_195347_S14_L000_R1_001.fastq.gz,/media/hieunguyen/GSHD_HN01/Download/Viki/CSK/A006850280_195347_S14_L000_R2_001.fastq.gz,auto
+Sample_195349,/media/hieunguyen/GSHD_HN01/Download/Viki/CSK/A006850280_195349_S15_L000_R1_001.fastq.gz,/media/hieunguyen/GSHD_HN01/Download/Viki/CSK/A006850280_195349_S15_L000_R2_001.fastq.gz,auto
+Sample_195336,/media/hieunguyen/GSHD_HN01/Download/Viki/CSK/A006850282_195336_S1_L000_R1_001.fastq.gz,/media/hieunguyen/GSHD_HN01/Download/Viki/CSK/A006850282_195336_S1_L000_R2_001.fastq.gz,auto
+Sample_107531,/media/hieunguyen/GSHD_HN01/Download/Viki/LYN/A006200041_107531_S6_L001_R1_001.fastq.gz,/media/hieunguyen/GSHD_HN01/Download/Viki/LYN/A006200041_107531_S6_L001_R2_001.fastq.gz,auto
+Sample_107533,/media/hieunguyen/GSHD_HN01/Download/Viki/LYN/A006200041_107533_S7_L001_R1_001.fastq.gz,/media/hieunguyen/GSHD_HN01/Download/Viki/LYN/A006200041_107533_S7_L001_R2_001.fastq.gz,auto
+Sample_107535,/media/hieunguyen/GSHD_HN01/Download/Viki/LYN/A006200041_107535_S8_L001_R1_001.fastq.gz,/media/hieunguyen/GSHD_HN01/Download/Viki/LYN/A006200041_107535_S8_L001_R2_001.fastq.gz,auto
+Sample_107537,/media/hieunguyen/GSHD_HN01/Download/Viki/LYN/A006200041_107537_S9_L001_R1_001.fastq.gz,/media/hieunguyen/GSHD_HN01/Download/Viki/LYN/A006200041_107537_S9_L001_R2_001.fastq.gz,auto
+Sample_107539,/media/hieunguyen/GSHD_HN01/Download/Viki/LYN/A006200041_107539_S10_L001_R1_001.fastq.gz,/media/hieunguyen/GSHD_HN01/Download/Viki/LYN/A006200041_107539_S10_L001_R2_001.fastq.gz,auto

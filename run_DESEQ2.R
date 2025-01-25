@@ -169,6 +169,7 @@ for (condition.col in all.conditions){
                       condition2 = "group2",
                       condition.col = condition.col)
 }
+
 run_pipeline_DESEQ2(condition1 = "group1", 
                     condition2 = "group3",
                     condition.col = "comparison1")

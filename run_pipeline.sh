@@ -1,7 +1,10 @@
 main_nf="/media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/main.nf";
-SampleSheet="/media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/SampleSheet.csv";
-outdir="/media/hieunguyen/HNSD01/outdir/NGS_24R251_viktoriak_A006850388";
-work="/media/hieunguyen/HNHD01/work"
+# SampleSheet="/media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/SampleSheet.csv";
+# SampleSheet="/media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/LYN_CSK_samplesheet.csv"
+SampleSheet="/media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/replacedSample_samplesheet.csv"
+
+outdir="/media/hieunguyen/HNSD01/outdir/NGS_24R251_viktoriak_A006850388_replace";
+work="/media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/work"
 
 mkdir -p ${work}
 mkdir -p $outdir;
