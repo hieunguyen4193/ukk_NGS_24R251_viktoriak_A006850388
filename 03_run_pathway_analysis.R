@@ -57,7 +57,7 @@ for (condition.col in all.cases){
     }
     
     dotplot.ORA.GO <- dotplot(ora.GO, size = "GeneRatio", showCategory=30) + ggtitle("Dotplot for Over-represnetation analysis")
-    writexl::write_xlsx(ora.GOdf, file.path(path.to.04.output, "ORA_GO_result.xlsx"))
+    writexl::write_xlsx(ora.GOdf, file.path(path.to.03.output, "ORA_GO_result.xlsx"))
     
     #####--------------------------------------------------------------------#####
     ##### ORA WITH KEGG
@@ -74,7 +74,7 @@ for (condition.col in all.cases){
     }
     
     dotplot.ORA.KEGG <- dotplot(ora.KEGG, size = "GeneRatio", showCategory=30) + ggtitle("Dotplot for Over-represnetation analysis")
-    writexl::write_xlsx(ora.KEGGdf, file.path(path.to.04.output, "ORA_KEGG_result.xlsx"))
+    writexl::write_xlsx(ora.KEGGdf, file.path(path.to.03.output, "ORA_KEGG_result.xlsx"))
     
     #####--------------------------------------------------------------------#####
     ##### GSEA WITH GO
@@ -99,8 +99,8 @@ for (condition.col in all.cases){
       rownames_to_column("idx")
     
     GSEA.GOdf <- GSEA.GOdf[order(GSEA.GOdf$NES, decreasing = TRUE), ]
-    saveRDS(object = GSEA.GO, file.path(path.to.04.output, "GSEA.GO.rds"))
-    writexl::write_xlsx(GSEA.GOdf, file.path(path.to.04.output, "GSEA_GOdf.xlsx"))
+    saveRDS(object = GSEA.GO, file.path(path.to.03.output, "GSEA.GO.rds"))
+    writexl::write_xlsx(GSEA.GOdf, file.path(path.to.03.output, "GSEA_GOdf.xlsx"))
     
     #####--------------------------------------------------------------------#####
     ##### GSEA WITH KEGG
@@ -124,8 +124,8 @@ for (condition.col in all.cases){
     
     GSEA.KEGGdf <- GSEA.KEGGdf[order(GSEA.KEGGdf$NES, decreasing = TRUE), ]
     
-    saveRDS(object = GSEA.KEGG, file.path(path.to.04.output, "GSEA.KEGG.rds"))
-    writexl::write_xlsx(GSEA.KEGGdf, file.path(path.to.04.output, "GSEA_KEGGdf.xlsx")) 
+    saveRDS(object = GSEA.KEGG, file.path(path.to.03.output, "GSEA.KEGG.rds"))
+    writexl::write_xlsx(GSEA.KEGGdf, file.path(path.to.03.output, "GSEA_KEGGdf.xlsx")) 
   }
 }
 
