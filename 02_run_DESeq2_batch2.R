@@ -21,8 +21,8 @@ meta.data <- read.csv(path.to.metadata)
 outdir <- "/media/hieunguyen/HNSD01/outdir"
 path.to.main.output <- file.path(outdir, "NGS_24R251_viktoriak_A006850388", "DESEQ2_output")
 path.to.01.output <- file.path(path.to.main.output, "01_output")
-path.to.03.output <- file.path(path.to.main.output, "03_output")
-dir.create(path.to.03.output, showWarnings = FALSE, recursive = TRUE)
+path.to.02.output <- file.path(path.to.main.output, "02_output")
+dir.create(path.to.02.output, showWarnings = FALSE, recursive = TRUE)
 
 meta.data.batch2 <- subset(meta.data, meta.data$batch == "batch2")
 
@@ -173,6 +173,6 @@ for (condition.col in all.conditions){
   run_pipeline_DESEQ2(condition1 = "group1", 
                       condition2 = "group2",
                       condition.col = condition.col,
-                      outputdir = path.to.03.output,
+                      outputdir = path.to.02.output,
                       input.metadata = meta.data.batch2)
 }
