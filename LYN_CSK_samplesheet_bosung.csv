@@ -1,0 +1,3 @@
+sample,fastq_1,fastq_2,strandedness
+Sample_195336_1,/media/hieunguyen/GSHD_HN01/Download/Viki/CSK/A006850280_195336_S9_L000_R1_001.fastq.gz,/media/hieunguyen/GSHD_HN01/Download/Viki/CSK/A006850280_195336_S9_L000_R2_001.fastq.gz,auto
+Sample_195336_2,/media/hieunguyen/GSHD_HN01/Download/Viki/CSK/A006850282_195336_S1_L000_R1_001.fastq.gz,/media/hieunguyen/GSHD_HN01/Download/Viki/CSK/A006850282_195336_S1_L000_R2_001.fastq.gz,auto

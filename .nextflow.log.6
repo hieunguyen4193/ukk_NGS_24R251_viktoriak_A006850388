@@ -1,55 +1,55 @@
-Nov-16 14:35:13.746 [main] DEBUG nextflow.cli.Launcher - $> nextflow run /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/main.nf --input /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/SampleSheet.csv --outdir /media/hieunguyen/HNSD01/outdir/NGS_24R251_viktoriak_A006850388 --fasta /media/hieunguyen/HNSD01/storage/ref/Homo_sapiens.GRCh38.dna_sm.primary_assembly.fa --gtf /media/hieunguyen/HNSD01/storage/ref/Homo_sapiens.GRCh38.108.gtf -profile docker -resume --max_cpus 20 --max_memory 75GB --publish_dir_mode copy -w ./work
-Nov-16 14:35:13.861 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 24.10.0
-Nov-16 14:35:13.888 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/hieunguyen/.nextflow/plugins; core-plugins: nf-amazon@2.9.0,nf-azure@1.10.1,nf-cloudcache@0.4.2,nf-codecommit@0.2.2,nf-console@1.1.4,nf-google@1.15.2,nf-tower@1.9.3,nf-wave@1.7.2
-Nov-16 14:35:13.912 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
-Nov-16 14:35:13.913 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
-Nov-16 14:35:13.917 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
-Nov-16 14:35:13.932 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
-Nov-16 14:35:13.962 [main] DEBUG nextflow.config.ConfigBuilder - Found config base: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/nextflow.config
-Nov-16 14:35:13.966 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/nextflow.config
-Nov-16 14:35:13.999 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/hieunguyen/.nextflow/secrets/store.json
-Nov-16 14:35:14.003 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@3122b117] - activable => nextflow.secret.LocalSecretsProvider@3122b117
-Nov-16 14:35:14.043 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `docker`
-Nov-16 14:35:18.144 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [bih, cfc_dev, uzl_omics, ifb_core, embl_hd, denbi_qbic, alice, mjolnir_globe, uppmax, giga, incliva, ilifu, uge, rosalind_uge, lugh, mccleary, unibe_ibu, vai, czbiohub_aws, jax, roslin, ccga_med, tes, scw, unc_longleaf, tigem, tubingen_apg, google, apollo, ipop_up, vsc_calcua, pdc_kth, googlels, ceci_nic5, stjude, daisybio, eddie, medair, biowulf, apptainer, bi, bigpurple, test_full_gcp, adcra, cedars, pawsey_setonix, vsc_kul_uhasselt, pawsey_nimbus, ucl_myriad, utd_ganymede, charliecloud, icr_davros, ceres, arm, munin, rosalind, hasta, cfc, test_full_aws, uzh, shu_bmrc, ebi_codon_slurm, ebc, ccga_dx, crick, ku_sund_danhead, marvin, shifter, biohpc_gen, mana, mamba, york_viking, unc_lccc, wehi, awsbatch, wustl_htcf, arcc, ceci_dragon2, imperial, maestro, software_license, genotoul, nci_gadi, abims, janelia, nu_genomics, googlebatch, oist, sahmri, mpcdf, leicester, vsc_ugent, create, sage, cambridge, jex, podman, ebi_codon, cheaha, xanadu, nyu_hpc, test, marjorie, computerome, ucd_sonic, seg_globe, sanger, dkfz, bluebear, pasteur, einstein, ethz_euler, m3c, test_full, imb, ucl_cscluster, tuos_stanage, azurebatch, hki, crukmi, csiro_petrichor, qmul_apocrita, wave, docker, test_full_azure, engaging, gis, hypatia, psmn, eva, nygc, fgcz, conda, crg, singularity, mpcdf_viper, pe2, self_hosted_runner, tufts, uw_hyak_pedslabs, utd_sysbio, debug, genouest, cbe, gitpod, phoenix, seawulf, uod_hpc, fub_curta, uct_hpc, aws_tower, binac]
-Nov-16 14:35:18.217 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 by global default
-Nov-16 14:35:18.239 [main] DEBUG nextflow.cli.CmdRun - Launching `/media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/main.nf` [shrivelled_fermi] DSL2 - revision: 85c9b75b8b
-Nov-16 14:35:18.240 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins declared=[nf-schema@2.1.1]
-Nov-16 14:35:18.241 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
-Nov-16 14:35:18.241 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[nf-schema@2.1.1]
-Nov-16 14:35:18.242 [main] DEBUG nextflow.plugin.PluginUpdater - Installing plugin nf-schema version: 2.1.1
-Nov-16 14:35:18.248 [main] INFO  org.pf4j.AbstractPluginManager - Plugin 'nf-schema@2.1.1' resolved
-Nov-16 14:35:18.248 [main] INFO  org.pf4j.AbstractPluginManager - Start plugin 'nf-schema@2.1.1'
-Nov-16 14:35:18.256 [main] DEBUG nextflow.plugin.BasePlugin - Plugin started nf-schema@2.1.1
-Nov-16 14:35:18.365 [main] DEBUG nextflow.Session - Session UUID: 23f1970b-159c-48bd-bca4-0ecccc36435d
-Nov-16 14:35:18.365 [main] DEBUG nextflow.Session - Run name: shrivelled_fermi
-Nov-16 14:35:18.366 [main] DEBUG nextflow.Session - Executor pool size: 56
-Nov-16 14:35:18.378 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
-Nov-16 14:35:18.384 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=168; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
-Nov-16 14:35:18.420 [main] DEBUG nextflow.cli.CmdRun - 
+Nov-16 14:36:59.648 [main] DEBUG nextflow.cli.Launcher - $> nextflow run /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/main.nf --input /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/SampleSheet.csv --outdir /media/hieunguyen/HNSD01/outdir/NGS_24R251_viktoriak_A006850388 --fasta /media/hieunguyen/HNSD01/storage/ref/Homo_sapiens.GRCh38.dna_sm.primary_assembly.fa --gtf /media/hieunguyen/HNSD01/storage/ref/Homo_sapiens.GRCh38.108.gtf -profile docker -resume --max_cpus 20 --max_memory 75GB --publish_dir_mode copy -w ./work
+Nov-16 14:36:59.756 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 24.10.0
+Nov-16 14:36:59.779 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/hieunguyen/.nextflow/plugins; core-plugins: nf-amazon@2.9.0,nf-azure@1.10.1,nf-cloudcache@0.4.2,nf-codecommit@0.2.2,nf-console@1.1.4,nf-google@1.15.2,nf-tower@1.9.3,nf-wave@1.7.2
+Nov-16 14:36:59.800 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Nov-16 14:36:59.801 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Nov-16 14:36:59.805 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
+Nov-16 14:36:59.820 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Nov-16 14:36:59.848 [main] DEBUG nextflow.config.ConfigBuilder - Found config base: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/nextflow.config
+Nov-16 14:36:59.852 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/nextflow.config
+Nov-16 14:36:59.882 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/hieunguyen/.nextflow/secrets/store.json
+Nov-16 14:36:59.887 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@3122b117] - activable => nextflow.secret.LocalSecretsProvider@3122b117
+Nov-16 14:36:59.927 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `docker`
+Nov-16 14:37:04.207 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [bih, cfc_dev, uzl_omics, ifb_core, embl_hd, denbi_qbic, alice, mjolnir_globe, uppmax, giga, incliva, ilifu, uge, rosalind_uge, lugh, mccleary, unibe_ibu, vai, czbiohub_aws, jax, roslin, ccga_med, tes, scw, unc_longleaf, tigem, tubingen_apg, google, apollo, ipop_up, vsc_calcua, pdc_kth, googlels, ceci_nic5, stjude, daisybio, eddie, medair, biowulf, apptainer, bi, bigpurple, test_full_gcp, adcra, cedars, pawsey_setonix, vsc_kul_uhasselt, pawsey_nimbus, ucl_myriad, utd_ganymede, charliecloud, icr_davros, ceres, arm, munin, rosalind, hasta, cfc, test_full_aws, uzh, shu_bmrc, ebi_codon_slurm, ebc, ccga_dx, crick, ku_sund_danhead, marvin, shifter, biohpc_gen, mana, mamba, york_viking, unc_lccc, wehi, awsbatch, wustl_htcf, arcc, ceci_dragon2, imperial, maestro, software_license, genotoul, nci_gadi, abims, janelia, nu_genomics, googlebatch, oist, sahmri, mpcdf, leicester, vsc_ugent, create, sage, cambridge, jex, podman, ebi_codon, cheaha, xanadu, nyu_hpc, test, marjorie, computerome, ucd_sonic, seg_globe, sanger, dkfz, bluebear, pasteur, einstein, ethz_euler, m3c, test_full, imb, ucl_cscluster, tuos_stanage, azurebatch, hki, crukmi, csiro_petrichor, qmul_apocrita, wave, docker, test_full_azure, engaging, gis, hypatia, psmn, eva, nygc, fgcz, conda, crg, singularity, mpcdf_viper, pe2, self_hosted_runner, tufts, uw_hyak_pedslabs, utd_sysbio, debug, genouest, cbe, gitpod, phoenix, seawulf, uod_hpc, fub_curta, uct_hpc, aws_tower, binac]
+Nov-16 14:37:04.279 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 by global default
+Nov-16 14:37:04.299 [main] DEBUG nextflow.cli.CmdRun - Launching `/media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/main.nf` [wise_archimedes] DSL2 - revision: 85c9b75b8b
+Nov-16 14:37:04.301 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins declared=[nf-schema@2.1.1]
+Nov-16 14:37:04.301 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Nov-16 14:37:04.302 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[nf-schema@2.1.1]
+Nov-16 14:37:04.302 [main] DEBUG nextflow.plugin.PluginUpdater - Installing plugin nf-schema version: 2.1.1
+Nov-16 14:37:04.310 [main] INFO  org.pf4j.AbstractPluginManager - Plugin 'nf-schema@2.1.1' resolved
+Nov-16 14:37:04.310 [main] INFO  org.pf4j.AbstractPluginManager - Start plugin 'nf-schema@2.1.1'
+Nov-16 14:37:04.319 [main] DEBUG nextflow.plugin.BasePlugin - Plugin started nf-schema@2.1.1
+Nov-16 14:37:04.424 [main] DEBUG nextflow.Session - Session UUID: 23f1970b-159c-48bd-bca4-0ecccc36435d
+Nov-16 14:37:04.425 [main] DEBUG nextflow.Session - Run name: wise_archimedes
+Nov-16 14:37:04.425 [main] DEBUG nextflow.Session - Executor pool size: 56
+Nov-16 14:37:04.436 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Nov-16 14:37:04.442 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=168; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Nov-16 14:37:04.468 [main] DEBUG nextflow.cli.CmdRun - 
   Version: 24.10.0 build 5928
   Created: 27-10-2024 18:36 UTC (19:36 CEST)
   System: Linux 5.15.0-125-generic
   Runtime: Groovy 4.0.23 on OpenJDK 64-Bit Server VM 11.0.25+9-post-Ubuntu-1ubuntu122.04
   Encoding: UTF-8 (UTF-8)
-  Process: 21411@hieunguyen [127.0.1.1]
-  CPUs: 56 - Mem: 125.8 GB (51.9 GB) - Swap: 2 GB (52 KB)
-Nov-16 14:35:18.457 [main] DEBUG nextflow.Session - Work-dir: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/work [ext2/ext3]
-Nov-16 14:35:18.515 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
-Nov-16 14:35:18.534 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
-Nov-16 14:35:18.617 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
-Nov-16 14:35:18.635 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 57; maxThreads: 1000
-Nov-16 14:35:18.788 [main] DEBUG nextflow.Session - Session start
-Nov-16 14:35:18.792 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow started -- trace file: /media/hieunguyen/HNSD01/outdir/NGS_24R251_viktoriak_A006850388/pipeline_info/execution_trace_2024-11-16_14-35-16.txt
-Nov-16 14:35:19.143 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
-Nov-16 14:35:22.422 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsSummaryLog:paramsSummaryLog]; plugin Id: nf-schema
-Nov-16 14:35:22.474 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [validateParameters:validateParameters]; plugin Id: nf-schema
-Nov-16 14:35:22.478 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsSummaryMap:paramsSummaryMap]; plugin Id: nf-schema
-Nov-16 14:35:27.297 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsSummaryMap:paramsSummaryMap]; plugin Id: nf-schema
-Nov-16 14:35:27.298 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [samplesheetToList:samplesheetToList]; plugin Id: nf-schema
-Nov-16 14:35:31.841 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsSummaryLog:paramsSummaryLog]; plugin Id: nf-schema
-Nov-16 14:35:31.841 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [validateParameters:validateParameters]; plugin Id: nf-schema
-Nov-16 14:35:31.843 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsSummaryMap:paramsSummaryMap]; plugin Id: nf-schema
-Nov-16 14:35:33.563 [main] INFO  nextflow.Nextflow - 
+  Process: 22912@hieunguyen [127.0.1.1]
+  CPUs: 56 - Mem: 125.8 GB (51.7 GB) - Swap: 2 GB (72 KB)
+Nov-16 14:37:04.502 [main] DEBUG nextflow.Session - Work-dir: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/work [ext2/ext3]
+Nov-16 14:37:04.545 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Nov-16 14:37:04.558 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Nov-16 14:37:04.616 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Nov-16 14:37:04.628 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 57; maxThreads: 1000
+Nov-16 14:37:04.716 [main] DEBUG nextflow.Session - Session start
+Nov-16 14:37:04.719 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow started -- trace file: /media/hieunguyen/HNSD01/outdir/NGS_24R251_viktoriak_A006850388/pipeline_info/execution_trace_2024-11-16_14-37-02.txt
+Nov-16 14:37:05.029 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Nov-16 14:37:08.535 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsSummaryLog:paramsSummaryLog]; plugin Id: nf-schema
+Nov-16 14:37:08.586 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [validateParameters:validateParameters]; plugin Id: nf-schema
+Nov-16 14:37:08.589 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsSummaryMap:paramsSummaryMap]; plugin Id: nf-schema
+Nov-16 14:37:13.784 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsSummaryMap:paramsSummaryMap]; plugin Id: nf-schema
+Nov-16 14:37:13.786 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [samplesheetToList:samplesheetToList]; plugin Id: nf-schema
+Nov-16 14:37:18.983 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsSummaryLog:paramsSummaryLog]; plugin Id: nf-schema
+Nov-16 14:37:18.984 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [validateParameters:validateParameters]; plugin Id: nf-schema
+Nov-16 14:37:18.990 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsSummaryMap:paramsSummaryMap]; plugin Id: nf-schema
+Nov-16 14:37:20.990 [main] INFO  nextflow.Nextflow - 
 -[2m----------------------------------------------------[0m-
                                         [0;32m,--.[0;30m/[0;32m,-.[0m
 [0;34m        ___     __   __   __   ___     [0;32m/,-._.--~'[0m
@@ -70,7 +70,7 @@ Nov-16 14:35:33.563 [main] INFO  nextflow.Nextflow -
   [0;34mmin_mapped_reads: [0;32m5[0m
 
 [1mCore Nextflow options[0m
-  [0;34mrunName         : [0;32mshrivelled_fermi[0m
+  [0;34mrunName         : [0;32mwise_archimedes[0m
   [0;34mcontainerEngine : [0;32mdocker[0m
   [0;34mlaunchDir       : [0;32m/media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388[0m
   [0;34mworkDir         : [0;32m/media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/work[0m
@@ -90,21 +90,22 @@ Nov-16 14:35:33.563 [main] INFO  nextflow.Nextflow -
 * Software dependencies
     https://github.com/nf-core/rnaseq/blob/master/CITATIONS.md
 
-Nov-16 14:35:33.567 [main] DEBUG nextflow.validation.SchemaValidator - Starting parameters validation
-Nov-16 14:35:33.613 [main] WARN  nextflow.validation.SchemaValidator - The following invalid input values have been detected:
+Nov-16 14:37:20.993 [main] DEBUG nextflow.validation.SchemaValidator - Starting parameters validation
+Nov-16 14:37:21.038 [main] WARN  nextflow.validation.SchemaValidator - The following invalid input values have been detected:
 
 * --max_cpus: 20
 * --max_memory: 75GB
 
 
-Nov-16 14:35:33.772 [main] DEBUG nextflow.validation.SchemaEvaluator - Started validating /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/SampleSheet.csv
-Nov-16 14:35:33.890 [main] DEBUG n.v.FormatDirectoryPathEvaluator - Cloud blob storage paths are not supported by 'FormatDirectoryPathEvaluator': 's3://ngi-igenomes/igenomes/'
-Nov-16 14:35:33.892 [main] ERROR nextflow.validation.SchemaValidator - Validation of pipeline parameters failed!
-Nov-16 14:35:33.901 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
-  Script_700a4742a1f56b73: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./workflows/rnaseq/../../subworkflows/nf-core/fastq_qc_trim_filter_setstrandedness/../fastq_fastqc_umitools_trimgalore/main.nf
-  Script_f289bdfe26d7f1cf: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./workflows/rnaseq/../../subworkflows/nf-core/fastq_qc_trim_filter_setstrandedness/../fastq_fastqc_umitools_trimgalore/../../../modules/nf-core/fastqc/main.nf
+Nov-16 14:37:21.185 [main] DEBUG nextflow.validation.SchemaEvaluator - Started validating /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/SampleSheet.csv
+Nov-16 14:37:21.279 [main] DEBUG nextflow.validation.SchemaEvaluator - Validation of file '/media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/SampleSheet.csv' passed!
+Nov-16 14:37:21.280 [main] DEBUG n.v.FormatDirectoryPathEvaluator - Cloud blob storage paths are not supported by 'FormatDirectoryPathEvaluator': 's3://ngi-igenomes/igenomes/'
+Nov-16 14:37:21.282 [main] ERROR nextflow.validation.SchemaValidator - Validation of pipeline parameters failed!
+Nov-16 14:37:21.291 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_700a4742a1f56b73: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./subworkflows/local/utils_nfcore_rnaseq_pipeline/../../nf-core/fastq_qc_trim_filter_setstrandedness/../fastq_fastqc_umitools_trimgalore/main.nf
+  Script_f289bdfe26d7f1cf: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./workflows/rnaseq/../../subworkflows/local/utils_nfcore_rnaseq_pipeline/../../nf-core/fastq_qc_trim_filter_setstrandedness/../fastq_fastqc_umitools_fastp/../../../modules/nf-core/fastqc/main.nf
   Script_4fb9e5798185138e: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./workflows/rnaseq/../../subworkflows/nf-core/fastq_align_hisat2/main.nf
-  Script_cdbce3e23a8f89e8: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./workflows/rnaseq/../../subworkflows/nf-core/bam_sort_stats_samtools/../bam_stats_samtools/main.nf
+  Script_cdbce3e23a8f89e8: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./workflows/rnaseq/../../subworkflows/nf-core/bam_dedup_stats_samtools_umitools/../bam_stats_samtools/main.nf
   Script_ba93fd870f3d5e8f: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./workflows/rnaseq/../../modules/nf-core/stringtie/stringtie/main.nf
   Script_274aad67990f7b6d: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./workflows/rnaseq/../../modules/local/deseq2_qc/main.nf
   Script_4955288afd8ca61e: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./workflows/rnaseq/../../modules/nf-core/multiqc/main.nf
@@ -123,33 +124,33 @@ Nov-16 14:35:33.901 [main] DEBUG nextflow.script.ScriptRunner - Parsed script fi
   Script_81a2876a059155a7: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./subworkflows/local/prepare_genome/../../../modules/local/gtf_filter/main.nf
   Script_6012db1a2adb3e63: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./workflows/rnaseq/../../subworkflows/nf-core/quantify_pseudo_alignment/../../../modules/nf-core/summarizedexperiment/summarizedexperiment/main.nf
   Script_cc2a9c8ba5b8cc15: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./workflows/rnaseq/../../subworkflows/nf-core/bam_rseqc/../../../modules/nf-core/rseqc/tin/main.nf
-  Script_de1c7c124fa4c7b4: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./workflows/rnaseq/../../subworkflows/nf-core/bam_sort_stats_samtools/../../../modules/nf-core/samtools/sort/main.nf
-  Script_3fe75c83449750cf: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./subworkflows/local/utils_nfcore_rnaseq_pipeline/../../nf-core/fastq_qc_trim_filter_setstrandedness/../fastq_subsample_fq_salmon/../../../modules/nf-core/salmon/index/main.nf
-  Script_2336832ee440cf47: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./subworkflows/local/utils_nfcore_rnaseq_pipeline/../../nf-core/fastq_qc_trim_filter_setstrandedness/../fastq_fastqc_umitools_fastp/main.nf
+  Script_de1c7c124fa4c7b4: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./workflows/rnaseq/../../subworkflows/local/quantify_rsem/../../nf-core/bam_sort_stats_samtools/../../../modules/nf-core/samtools/sort/main.nf
+  Script_3fe75c83449750cf: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./subworkflows/local/prepare_genome/../../../modules/nf-core/salmon/index/main.nf
+  Script_2336832ee440cf47: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./workflows/rnaseq/../../subworkflows/local/utils_nfcore_rnaseq_pipeline/../../nf-core/fastq_qc_trim_filter_setstrandedness/../fastq_fastqc_umitools_fastp/main.nf
   Script_e10a0e7467f0b3e9: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./workflows/rnaseq/../../subworkflows/nf-core/bam_markduplicates_picard/../../../modules/nf-core/picard/markduplicates/main.nf
-  Script_9dafebea04962540: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./workflows/rnaseq/../../subworkflows/nf-core/fastq_qc_trim_filter_setstrandedness/../../../modules/nf-core/cat/fastq/main.nf
-  Script_d09a57bae36c5a8c: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./subworkflows/local/utils_nfcore_rnaseq_pipeline/../../nf-core/fastq_qc_trim_filter_setstrandedness/../fastq_subsample_fq_salmon/../../../modules/nf-core/salmon/quant/main.nf
+  Script_9dafebea04962540: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./subworkflows/local/utils_nfcore_rnaseq_pipeline/../../nf-core/fastq_qc_trim_filter_setstrandedness/../../../modules/nf-core/cat/fastq/main.nf
   Script_00f15dacb1370c16: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./workflows/rnaseq/../../subworkflows/nf-core/bam_rseqc/../../../modules/nf-core/rseqc/junctionannotation/main.nf
+  Script_d09a57bae36c5a8c: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./workflows/rnaseq/../../subworkflows/nf-core/fastq_qc_trim_filter_setstrandedness/../fastq_subsample_fq_salmon/../../../modules/nf-core/salmon/quant/main.nf
   Script_b043057988626cf5: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./subworkflows/local/prepare_genome/../../../modules/local/gtf2bed/main.nf
   Script_2882453b74be5692: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./workflows/rnaseq/../../modules/local/multiqc_custom_biotype/main.nf
   Script_2ef994d5e8cb2cca: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./workflows/rnaseq/../../subworkflows/local/align_star/../../../modules/nf-core/star/align/main.nf
   Script_5752768576b10575: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./workflows/rnaseq/../../subworkflows/nf-core/bedgraph_bedclip_bedgraphtobigwig/../../../modules/nf-core/ucsc/bedgraphtobigwig/main.nf
   Script_bf5c4db2e13898ce: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./subworkflows/local/prepare_genome/main.nf
-  Script_b59c576c4446d2c0: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./subworkflows/local/utils_nfcore_rnaseq_pipeline/../../nf-core/fastq_qc_trim_filter_setstrandedness/main.nf
+  Script_b59c576c4446d2c0: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./workflows/rnaseq/../../subworkflows/nf-core/fastq_qc_trim_filter_setstrandedness/main.nf
   Script_bfcc6b499d31082a: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./subworkflows/local/utils_nfcore_rnaseq_pipeline/../../nf-core/fastq_qc_trim_filter_setstrandedness/../fastq_fastqc_umitools_trimgalore/../../../modules/nf-core/trimgalore/main.nf
-  Script_8ea3feb9c15d5fda: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./workflows/rnaseq/../../subworkflows/nf-core/fastq_qc_trim_filter_setstrandedness/../fastq_subsample_fq_salmon/../../../modules/nf-core/fq/subsample/main.nf
+  Script_8ea3feb9c15d5fda: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./subworkflows/local/utils_nfcore_rnaseq_pipeline/../../nf-core/fastq_qc_trim_filter_setstrandedness/../fastq_subsample_fq_salmon/../../../modules/nf-core/fq/subsample/main.nf
   Script_54e0c3dce4d8c049: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./workflows/rnaseq/../../modules/nf-core/dupradar/main.nf
-  Script_e83567872dab8752: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./subworkflows/local/utils_nfcore_rnaseq_pipeline/main.nf
+  Script_e83567872dab8752: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./workflows/rnaseq/../../subworkflows/local/utils_nfcore_rnaseq_pipeline/main.nf
   Script_fe6f9a2d2d32c34f: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./workflows/rnaseq/../../subworkflows/nf-core/bam_rseqc/../../../modules/nf-core/rseqc/innerdistance/main.nf
   Script_e927852b807f691d: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./workflows/rnaseq/../../subworkflows/nf-core/bam_rseqc/../../../modules/nf-core/rseqc/inferexperiment/main.nf
   Script_0eb0afd192164cce: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./workflows/rnaseq/../../subworkflows/nf-core/fastq_align_hisat2/../../../modules/nf-core/hisat2/align/main.nf
   Script_18089a64b4672be8: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./workflows/rnaseq/../../subworkflows/nf-core/bam_rseqc/main.nf
-  Script_3ff1656b1d66c1f2: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./workflows/rnaseq/../../subworkflows/local/quantify_rsem/../../nf-core/bam_sort_stats_samtools/../../../modules/nf-core/samtools/index/main.nf
+  Script_3ff1656b1d66c1f2: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./workflows/rnaseq/../../subworkflows/nf-core/bam_dedup_stats_samtools_umitools/../../../modules/nf-core/samtools/index/main.nf
   Script_bb977b7c9974defb: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./workflows/rnaseq/../../modules/nf-core/subread/featurecounts/main.nf
   Script_8703d5c7d48af3ab: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./subworkflows/local/prepare_genome/../../../modules/local/star_genomegenerate_igenomes/main.nf
-  Script_8539cabf2246c13c: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./workflows/rnaseq/../../subworkflows/nf-core/fastq_qc_trim_filter_setstrandedness/../../../modules/nf-core/bbmap/bbsplit/main.nf
+  Script_8539cabf2246c13c: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./subworkflows/local/utils_nfcore_rnaseq_pipeline/../../nf-core/fastq_qc_trim_filter_setstrandedness/../../../modules/nf-core/bbmap/bbsplit/main.nf
   Script_59101990e865c327: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./workflows/rnaseq/../../subworkflows/nf-core/bam_dedup_stats_samtools_umitools/../../../modules/nf-core/umitools/dedup/main.nf
-  Script_b4163cee6a6b2681: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./subworkflows/local/utils_nfcore_rnaseq_pipeline/../../nf-core/fastq_qc_trim_filter_setstrandedness/../fastq_fastqc_umitools_fastp/../../../modules/nf-core/umitools/extract/main.nf
+  Script_b4163cee6a6b2681: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./workflows/rnaseq/../../subworkflows/nf-core/fastq_qc_trim_filter_setstrandedness/../fastq_fastqc_umitools_trimgalore/../../../modules/nf-core/umitools/extract/main.nf
   Script_cac98b66b2be514e: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/main.nf
   Script_58ab0c288a51eacd: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./workflows/rnaseq/../../subworkflows/local/quantify_rsem/../../../modules/local/rsem_merge_counts/main.nf
   Script_1adca4cb4e6fb5ea: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./workflows/rnaseq/../../subworkflows/nf-core/bam_dedup_stats_samtools_umitools/main.nf
@@ -166,14 +167,14 @@ Nov-16 14:35:33.901 [main] DEBUG nextflow.script.ScriptRunner - Parsed script fi
   Script_f84ac7d7414849ca: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./workflows/rnaseq/../../modules/nf-core/qualimap/rnaseq/main.nf
   Script_23e9bb1f954772b0: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./workflows/rnaseq/../../subworkflows/nf-core/bedgraph_bedclip_bedgraphtobigwig/../../../modules/nf-core/ucsc/bedclip/main.nf
   Script_215a636da7ab24a2: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./workflows/rnaseq/../../subworkflows/local/utils_nfcore_rnaseq_pipeline/../../nf-core/utils_nfschema_plugin/main.nf
-  Script_9f6ce129b29ed4a5: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./workflows/rnaseq/../../subworkflows/nf-core/fastq_qc_trim_filter_setstrandedness/../fastq_fastqc_umitools_fastp/../../../modules/nf-core/fastp/main.nf
+  Script_9f6ce129b29ed4a5: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./workflows/rnaseq/../../subworkflows/local/utils_nfcore_rnaseq_pipeline/../../nf-core/fastq_qc_trim_filter_setstrandedness/../fastq_fastqc_umitools_fastp/../../../modules/nf-core/fastp/main.nf
   Script_65df9a280f8440bc: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./workflows/rnaseq/main.nf
   Script_210bd6478ac003f9: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./workflows/rnaseq/../../subworkflows/local/align_star/../../../modules/local/star_align_igenomes/main.nf
   Script_1c7d7a4569b86317: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./workflows/rnaseq/../../subworkflows/nf-core/bam_markduplicates_picard/../bam_stats_samtools/../../../modules/nf-core/samtools/stats/main.nf
   Script_dbe8fbfa975cebf1: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./workflows/rnaseq/../../subworkflows/nf-core/bam_rseqc/../../../modules/nf-core/rseqc/junctionsaturation/main.nf
   Script_4e706ffea9c34ab7: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./subworkflows/local/prepare_genome/../../../modules/nf-core/hisat2/build/main.nf
   Script_7acb62b9e60b283e: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./workflows/rnaseq/../../subworkflows/nf-core/bam_rseqc/../../../modules/nf-core/rseqc/readduplication/main.nf
-  Script_1988a0fe7ca53b87: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./workflows/rnaseq/../../subworkflows/local/quantify_rsem/../../nf-core/bam_sort_stats_samtools/../bam_stats_samtools/../../../modules/nf-core/samtools/idxstats/main.nf
+  Script_1988a0fe7ca53b87: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./workflows/rnaseq/../../subworkflows/local/align_star/../../nf-core/bam_sort_stats_samtools/../bam_stats_samtools/../../../modules/nf-core/samtools/idxstats/main.nf
   Script_c3f4bd3b3e600606: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./workflows/rnaseq/../../subworkflows/nf-core/quantify_pseudo_alignment/main.nf
   Script_128cb4fde5e21aab: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./workflows/rnaseq/../../subworkflows/nf-core/quantify_pseudo_alignment/../../../modules/nf-core/custom/tx2gene/main.nf
   Script_1a18572a60f1dc55: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./workflows/rnaseq/../../subworkflows/local/align_star/main.nf
@@ -182,88 +183,20 @@ Nov-16 14:35:33.901 [main] DEBUG nextflow.script.ScriptRunner - Parsed script fi
   Script_e76b9210f32f34ec: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./workflows/rnaseq/../../modules/nf-core/umitools/prepareforrsem/main.nf
   Script_ed8a2d8877b0f6d8: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./subworkflows/local/prepare_genome/../../../modules/nf-core/star/genomegenerate/main.nf
   Script_bd8537eec78d4f82: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./workflows/rnaseq/../../subworkflows/nf-core/bam_rseqc/../../../modules/nf-core/rseqc/readdistribution/main.nf
-  Script_f1f53abfc1403f76: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./subworkflows/local/utils_nfcore_rnaseq_pipeline/../../nf-core/fastq_qc_trim_filter_setstrandedness/../fastq_subsample_fq_salmon/main.nf
-  Script_2ebe1d1a775a7432: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./workflows/rnaseq/../../subworkflows/nf-core/fastq_align_hisat2/../bam_sort_stats_samtools/main.nf
-Nov-16 14:35:33.901 [main] DEBUG nextflow.Session - Session aborted -- Cause: [0;31mThe following invalid input values have been detected:
+  Script_f1f53abfc1403f76: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./workflows/rnaseq/../../subworkflows/nf-core/fastq_qc_trim_filter_setstrandedness/../fastq_subsample_fq_salmon/main.nf
+  Script_2ebe1d1a775a7432: /media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/rnaseq/./workflows/rnaseq/../../subworkflows/nf-core/bam_sort_stats_samtools/main.nf
+Nov-16 14:37:21.291 [main] DEBUG nextflow.Session - Session aborted -- Cause: [0;31mThe following invalid input values have been detected:
 
-* --input (/media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/SampleSheet.csv): Validation of file failed:
-	-> Entry 1: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232636_S5_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 1: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232636_S5_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 2: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232639_S6_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 2: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232639_S6_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 3: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232641_S7_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 3: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232641_S7_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 4: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232643_S8_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 4: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232643_S8_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 5: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232645_S9_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 5: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232645_S9_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 6: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232647_S10_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 6: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232647_S10_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 7: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232649_S11_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 7: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232649_S11_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 8: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232651_S12_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 8: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232651_S12_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 9: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232653_S13_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 9: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232653_S13_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 10: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232655_S14_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 10: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232655_S14_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 11: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232657_S15_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 11: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232657_S15_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 12: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232659_S16_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 12: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232659_S16_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 13: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232661_S17_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 13: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232661_S17_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 14: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232663_S18_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 14: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232663_S18_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 15: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232665_S19_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 15: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232665_S19_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 16: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232667_S20_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 16: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232667_S20_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 17: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232669_S21_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 17: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232669_S21_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 18: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232671_S22_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 18: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232671_S22_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 19: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232673_S23_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 19: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232673_S23_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 20: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232675_S24_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 20: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232675_S24_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 21: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232677_S25_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 21: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232677_S25_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 22: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232679_S26_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 22: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232679_S26_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 23: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232681_S27_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 23: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232681_S27_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 24: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232683_S28_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 24: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232683_S28_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 25: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232685_S29_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 25: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232685_S29_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 26: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232687_S30_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 26: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232687_S30_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 27: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232689_S31_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 27: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232689_S31_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 28: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232691_S32_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 28: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232691_S32_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 29: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232693_S33_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 29: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232693_S33_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 30: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232695_S34_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 30: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232695_S34_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 31: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232697_S35_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 31: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232697_S35_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 32: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232699_S36_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 32: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232699_S36_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 33: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232701_S37_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 33: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232701_S37_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 34: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232703_S38_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 34: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232703_S38_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 35: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232705_S39_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 35: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232705_S39_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 36: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232707_S40_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 36: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232707_S40_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
 * --fasta (/media/hieunguyen/HNSD01/storage/ref/Homo_sapiens.GRCh38.dna_sm.primary_assembly.fa): the file or directory '/media/hieunguyen/HNSD01/storage/ref/Homo_sapiens.GRCh38.dna_sm.primary_assembly.fa' does not exist
 * --gtf (/media/hieunguyen/HNSD01/storage/ref/Homo_sapiens.GRCh38.108.gtf): the file or directory '/media/hieunguyen/HNSD01/storage/ref/Homo_sapiens.GRCh38.108.gtf' does not exist
 [0m
 
-Nov-16 14:35:33.909 [main] DEBUG nextflow.Session - 
+Nov-16 14:37:21.299 [main] DEBUG nextflow.Session - 
+Thread[Reference Handler,10,system]
+  java.base@11.0.25/java.lang.ref.Reference.waitForReferencePendingList(Native Method)
+  java.base@11.0.25/java.lang.ref.Reference.processPendingReferences(Reference.java:241)
+  java.base@11.0.25/java.lang.ref.Reference$ReferenceHandler.run(Reference.java:213)
+
 Thread[main,5,main]
   java.base@11.0.25/java.lang.Thread.dumpThreads(Native Method)
   java.base@11.0.25/java.lang.Thread.getAllStackTraces(Thread.java:1653)
@@ -273,6 +206,13 @@ Thread[main,5,main]
   app//nextflow.cli.CmdRun.run(CmdRun.groovy:376)
   app//nextflow.cli.Launcher.run(Launcher.groovy:503)
   app//nextflow.cli.Launcher.main(Launcher.groovy:658)
+
+Thread[Common-Cleaner,8,InnocuousThreadGroup]
+  java.base@11.0.25/java.lang.Object.wait(Native Method)
+  java.base@11.0.25/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+  java.base@11.0.25/jdk.internal.ref.CleanerImpl.run(CleanerImpl.java:148)
+  java.base@11.0.25/java.lang.Thread.run(Thread.java:829)
+  java.base@11.0.25/jdk.internal.misc.InnocuousThread.run(InnocuousThread.java:161)
 
 Thread[process reaper,10,system]
   java.base@11.0.25/jdk.internal.misc.Unsafe.park(Native Method)
@@ -285,21 +225,26 @@ Thread[process reaper,10,system]
   java.base@11.0.25/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
   java.base@11.0.25/java.lang.Thread.run(Thread.java:829)
 
-Thread[Finalizer,8,system]
-  java.base@11.0.25/java.lang.Object.wait(Native Method)
-  java.base@11.0.25/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
-  java.base@11.0.25/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:176)
-  java.base@11.0.25/java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:170)
+Thread[Signal Dispatcher,9,system]
 
-Thread[Actor Thread 1,5,main]
-  java.base@11.0.25/jdk.internal.misc.Unsafe.park(Native Method)
-  java.base@11.0.25/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
-  java.base@11.0.25/java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:460)
-  java.base@11.0.25/java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:361)
-  java.base@11.0.25/java.util.concurrent.SynchronousQueue.take(SynchronousQueue.java:920)
-  java.base@11.0.25/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
-  java.base@11.0.25/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
-  java.base@11.0.25/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+Thread[AnsiLogObserver,5,main]
+  java.base@11.0.25/java.lang.Object.wait(Native Method)
+  app//nextflow.trace.AnsiLogObserver.render0(AnsiLogObserver.groovy:185)
+  java.base@11.0.25/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  java.base@11.0.25/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  java.base@11.0.25/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.base@11.0.25/java.lang.reflect.Method.invoke(Method.java:566)
+  app//org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+  app//groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+  app//groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1333)
+  app//groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1088)
+  app//groovy.lang.MetaClassImpl.invokeMethodClosure(MetaClassImpl.java:1017)
+  app//groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1207)
+  app//groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1088)
+  app//groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
+  app//groovy.lang.Closure.call(Closure.java:433)
+  app//groovy.lang.Closure.call(Closure.java:412)
+  app//groovy.lang.Closure.run(Closure.java:505)
   java.base@11.0.25/java.lang.Thread.run(Thread.java:829)
 
 Thread[Thread-1,5,main]
@@ -326,116 +271,26 @@ Thread[Thread-1,5,main]
   app//groovy.lang.Closure.run(Closure.java:505)
   java.base@11.0.25/java.lang.Thread.run(Thread.java:829)
 
-Thread[Signal Dispatcher,9,system]
-
-Thread[AnsiLogObserver,5,main]
-  java.base@11.0.25/java.lang.Object.wait(Native Method)
-  app//nextflow.trace.AnsiLogObserver.render0(AnsiLogObserver.groovy:185)
-  java.base@11.0.25/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-  java.base@11.0.25/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-  java.base@11.0.25/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-  java.base@11.0.25/java.lang.reflect.Method.invoke(Method.java:566)
-  app//org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
-  app//groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
-  app//groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1333)
-  app//groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1088)
-  app//groovy.lang.MetaClassImpl.invokeMethodClosure(MetaClassImpl.java:1017)
-  app//groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1207)
-  app//groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1088)
-  app//groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
-  app//groovy.lang.Closure.call(Closure.java:433)
-  app//groovy.lang.Closure.call(Closure.java:412)
-  app//groovy.lang.Closure.run(Closure.java:505)
-  java.base@11.0.25/java.lang.Thread.run(Thread.java:829)
-
-Thread[Reference Handler,10,system]
-  java.base@11.0.25/java.lang.ref.Reference.waitForReferencePendingList(Native Method)
-  java.base@11.0.25/java.lang.ref.Reference.processPendingReferences(Reference.java:241)
-  java.base@11.0.25/java.lang.ref.Reference$ReferenceHandler.run(Reference.java:213)
-
-Thread[Common-Cleaner,8,InnocuousThreadGroup]
+Thread[Finalizer,8,system]
   java.base@11.0.25/java.lang.Object.wait(Native Method)
   java.base@11.0.25/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
-  java.base@11.0.25/jdk.internal.ref.CleanerImpl.run(CleanerImpl.java:148)
-  java.base@11.0.25/java.lang.Thread.run(Thread.java:829)
-  java.base@11.0.25/jdk.internal.misc.InnocuousThread.run(InnocuousThread.java:161)
+  java.base@11.0.25/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:176)
+  java.base@11.0.25/java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:170)
 
-Nov-16 14:35:33.923 [main] DEBUG nextflow.cli.Launcher - Operation aborted
+Thread[Actor Thread 1,5,main]
+  java.base@11.0.25/jdk.internal.misc.Unsafe.park(Native Method)
+  java.base@11.0.25/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+  java.base@11.0.25/java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:460)
+  java.base@11.0.25/java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:361)
+  java.base@11.0.25/java.util.concurrent.SynchronousQueue.take(SynchronousQueue.java:920)
+  java.base@11.0.25/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+  java.base@11.0.25/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+  java.base@11.0.25/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+  java.base@11.0.25/java.lang.Thread.run(Thread.java:829)
+
+Nov-16 14:37:21.311 [main] DEBUG nextflow.cli.Launcher - Operation aborted
 nextflow.validation.SchemaValidationException: [0;31mThe following invalid input values have been detected:
 
-* --input (/media/hieunguyen/HNSD01/src/NGS_24R251_viktoriak_A006850388/SampleSheet.csv): Validation of file failed:
-	-> Entry 1: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232636_S5_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 1: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232636_S5_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 2: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232639_S6_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 2: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232639_S6_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 3: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232641_S7_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 3: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232641_S7_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 4: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232643_S8_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 4: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232643_S8_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 5: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232645_S9_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 5: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232645_S9_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 6: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232647_S10_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 6: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232647_S10_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 7: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232649_S11_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 7: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232649_S11_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 8: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232651_S12_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 8: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232651_S12_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 9: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232653_S13_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 9: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232653_S13_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 10: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232655_S14_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 10: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232655_S14_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 11: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232657_S15_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 11: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232657_S15_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 12: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232659_S16_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 12: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232659_S16_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 13: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232661_S17_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 13: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232661_S17_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 14: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232663_S18_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 14: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232663_S18_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 15: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232665_S19_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 15: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232665_S19_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 16: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232667_S20_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 16: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232667_S20_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 17: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232669_S21_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 17: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232669_S21_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 18: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232671_S22_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 18: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232671_S22_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 19: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232673_S23_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 19: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232673_S23_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 20: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232675_S24_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 20: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232675_S24_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 21: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232677_S25_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 21: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232677_S25_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 22: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232679_S26_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 22: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232679_S26_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 23: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232681_S27_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 23: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232681_S27_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 24: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232683_S28_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 24: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232683_S28_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 25: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232685_S29_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 25: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232685_S29_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 26: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232687_S30_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 26: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232687_S30_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 27: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232689_S31_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 27: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232689_S31_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 28: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232691_S32_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 28: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232691_S32_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 29: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232693_S33_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 29: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232693_S33_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 30: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232695_S34_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 30: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232695_S34_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 31: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232697_S35_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 31: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232697_S35_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 32: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232699_S36_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 32: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232699_S36_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 33: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232701_S37_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 33: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232701_S37_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 34: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232703_S38_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 34: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232703_S38_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 35: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232705_S39_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 35: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232705_S39_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 36: Error for field 'fastq_2' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232707_S40_L000_R2_001.fastq.gz): FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
-	-> Entry 36: Error for field 'fastq_1' (/media/hieunguyen/HNSD01/storage/NGS_24R251_viktoriak_A006850388/A006850388_232707_S40_L000_R1_001.fastq.gz): FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'
 * --fasta (/media/hieunguyen/HNSD01/storage/ref/Homo_sapiens.GRCh38.dna_sm.primary_assembly.fa): the file or directory '/media/hieunguyen/HNSD01/storage/ref/Homo_sapiens.GRCh38.dna_sm.primary_assembly.fa' does not exist
 * --gtf (/media/hieunguyen/HNSD01/storage/ref/Homo_sapiens.GRCh38.108.gtf): the file or directory '/media/hieunguyen/HNSD01/storage/ref/Homo_sapiens.GRCh38.108.gtf' does not exist
 [0m
